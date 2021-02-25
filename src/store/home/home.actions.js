@@ -1,6 +1,6 @@
 import * as types from "../redux/types"
 
-export const testHome = () => {
+export const increaseCount = () => {
   return {
     type: types.COUNTER,
   }
