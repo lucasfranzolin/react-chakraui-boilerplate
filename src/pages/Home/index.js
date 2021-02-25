@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-const Home = ({ count, testHome }) => {
+const Home = ({ count, increaseCount }) => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
@@ -19,7 +19,7 @@ const Home = ({ count, testHome }) => {
         <Button
           mr={4}
           onClick={() => {
-            testHome("Hello from REDUX")
+            increaseCount()
           }}
           colorScheme={colorMode === "light" ? "green" : "blue"}
         >
@@ -44,7 +44,7 @@ const mapStateToProps = ({ home }) => ({
 })
 
 const mapDispatchToProps = {
-  testHome: actions.testHome,
+  increaseCount: actions.increaseCount,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
