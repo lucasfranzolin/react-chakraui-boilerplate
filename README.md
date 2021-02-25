@@ -1,6 +1,6 @@
-# Make sure to have eslint installed
+# First step
 
-- `yarn global add eslint eslint-cli`
+- `yarn global add eslint eslint-cli cross-env`
 
 # Important libraries included
 
